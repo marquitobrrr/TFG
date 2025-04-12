@@ -2,7 +2,7 @@
 $host = "localhost";
 $dbname = "print_server";
 $username = "root";
-$password = ""; // poné tu contraseña aquí
+$password = "232425"; 
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
