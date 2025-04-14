@@ -3,8 +3,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Servijam | Registro</title>
-    <link rel="icon" href="imgs/logo.png" type="image/png">
+    <title>Acerca de nosotros</title>
+    <link rel="icon" href="imgs/logo.png" type="image/x-icon">
     <style>
         * {
             box-sizing: border-box;
@@ -65,11 +65,15 @@
         .dropdown div {
             padding: 10px 20px;
             border-bottom: 1px solid #444;
-            color: #ccc;
         }
 
         .dropdown div:last-child {
             border-bottom: none;
+        }
+
+        .dropdown a {
+            color: #ccc;
+            text-decoration: none;
         }
 
         .sidebar {
@@ -81,58 +85,23 @@
             background-color: #121212;
         }
 
-        .login-box {
+        .content-box {
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: flex-start;
             height: calc(100vh - 60px);
-            margin-left: 60px;
+            margin-left: 100px;
+            padding: 20px;
+            max-width: 600px;
         }
 
-        .login-form {
-            background-color: #2e2e2e;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #000;
-            width: 400px;
+        .content-box h1 {
+            margin-bottom: 20px;
         }
 
-        .login-form label {
-            margin-top: 15px;
-            display: block;
-            font-size: 14px;
-        }
-
-        .login-form input {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            background-color: #1e1e1e;
-            border: none;
-            color: #fff;
-            border-bottom: 2px solid #555;
-        }
-
-        .login-form input[type="submit"] {
-            background-color: #444;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        .login-form input[type="submit"]:hover {
-            background-color: #666;
-        }
-
-        .login-form a {
-            color: #aaa;
-            text-decoration: none;
-            font-size: 14px;
-            display: block;
-            margin-top: 15px;
-            text-align: center;
+        .content-box p {
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -145,28 +114,29 @@
         <div class="title">servijam</div>
         <div class="menu-button" onclick="toggleMenu()">⋮</div>
         <div class="dropdown" id="dropdown-menu">
-            <div onclick="location.href='index.php'">Iniciar sesión</div>
-            <div onclick="location.href='register.php'">Registrarse</div>
-            <div onclick="location.href='about.php'">Acerca de nosotros</div>
+            <div><a href="index.php">Iniciar sesión</a></div>
+            <div><a href="register.php">Registrarse</a></div>
+            <div><a href="acerca.php">Acerca de nosotros</a></div>
         </div>
     </div>
 
     <div class="sidebar"></div>
 
-    <div class="login-box">
-        <form class="login-form" action="process_register.php" method="post">
-            <label>Nombre de usuario:</label>
-            <input type="text" name="username" required>
-
-            <label>Contraseña:</label>
-            <input type="password" name="password" required>
-
-            <label>Correo electrónico (opcional):</label>
-            <input type="email" name="email">
-
-            <input type="submit" value="Registrarse">
-            <a href="index.php">¿Ya tenés cuenta? Iniciá sesión aquí</a>
-        </form>
+    <div class="content-box">
+        <h1>Acerca de nosotros</h1>
+        <p>
+            Servijam es una aplicación web diseñada para la gestión de trabajos de impresión 3D.
+            Su objetivo es facilitar a los usuarios el envío de archivos Gcode listos para imprimir,
+            llevando un control centralizado y sencillo tanto para administradores como para usuarios finales.
+        </p>
+        <p>
+            A través de esta plataforma, buscamos automatizar y simplificar el flujo de impresión,
+            mejorando la organización de tareas, control de accesos y trazabilidad de trabajos.
+        </p>
+        <p>
+            Este proyecto está en constante evolución y se adapta a las necesidades de servicios de impresión
+            personalizados, tanto para centros educativos como empresas tecnológicas.
+        </p>
     </div>
 
     <script>
