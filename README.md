@@ -9,19 +9,16 @@
 
 ---
 
-## 📂 Índice de Contenidos
+## 📂 Estructura del Repositorio
 
-Explora los módulos que componen la infraestructura de Servijam:
-
-| Carpeta | Descripción | Stack Principal |
+| Carpeta / Archivo | Descripción | Tecnologías Clave |
 | :--- | :--- | :--- |
-| [📁 Cap 1. Introducción](./Capítulo-1-Introducción) | [cite_start]Objetivos y requisitos funcionales/técnicos del sistema[cite: 35]. | `Documentación` |
-| [📁 Cap 2. Base teórica](./Capítulo-2-Base-teórica) | [cite_start]Esquema de red e infraestructura (Tailscale, Moonraker, Docker)[cite: 38]. | `Infraestructura` |
-| [📁 Cap 3. Desc. experimental](./Capítulo-3-Descripción-experimental) | [cite_start]Desarrollo de la web interactiva y gestión de la base de datos[cite: 42]. | `PHP` `MariaDB` |
-| [📁 Cap 4. Conclusiones](./Capítulo-4-Conclusiones-y-líneas-futuras) | [cite_start]Validación del entorno y propuestas de escalabilidad (2FA, Granjas)[cite: 45]. | `Análisis` |
+| [📁 Servijam](./Servijam) | Núcleo de la aplicación web interactiva. [cite_start]Incluye el frontend y la lógica de servidor[cite: 27, 276]. | `PHP` `JS` `Apache` |
+| [📁 DB_Servijam](./DB_Servijam) | [cite_start]Contiene el esquema relacional para la gestión de usuarios y trazabilidad[cite: 856, 857]. | `MariaDB` `SQL` |
+| [📁 imgs](./Servijam/imgs) | [cite_start]Recursos visuales y logos utilizados en la interfaz de la plataforma[cite: 288, 290]. | `JPG/PNG` |
+| [📄 Servijam.sql](./DB_Servijam/Servijam.sql) | [cite_start]Script de inicialización de la base de datos[cite: 857]. | `SQL` |
 
 ---
-
 ## 🛠️ Tecnologías y Herramientas
 
 ### 🗄️ Gestión de Datos y Backend
@@ -66,6 +63,17 @@ Explora los módulos que componen la infraestructura de Servijam:
 [cite_start]**Institución:** Colegio Institución La Salle (Madrid) [cite: 10, 17]
 
 ---
+<p align="left">
+  <a href="https://www.linkedin.com/in/juanhernandzr" target="_blank">
+    <b>🔗 LinkedIn Juan Carlos Hernandez Risso </b>
+  </a>
+</p>
+
+<p align="left">
+  <a href="https://www.linkedin.com/in/arturo-manso-ba5484369" target="_blank">
+    <b>🔗 LinkedIn Arturo Manso Borrego </b>
+  </a>
+</p>
 
 <p align="left">
   <a href="https://www.linkedin.com/in/marco-antonio-m%C3%A9ndez-rivero-a8a85628a" target="_blank">
