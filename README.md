@@ -5,73 +5,73 @@
 </p>
 
 ## 📝 Resumen del Proyecto
-**Servijam** es un sistema de gestión para impresoras 3D en red diseñado para entornos colaborativos (centros educativos, laboratorios o espacios maker). [cite_start]Utiliza una arquitectura modular sobre **Raspberry Pi** para permitir el control remoto, seguro y eficiente de los procesos de fabricación aditiva[cite: 971, 972].
+[cite_start]**Servijam** es una plataforma completa diseñada para la gestión profesional de servicios de impresión 3D en red[cite: 31]. [cite_start]El sistema permite el control remoto, seguro y eficiente de los procesos de impresión mediante una arquitectura modular basada en **Raspberry Pi**[cite: 26]. [cite_start]Está orientado a entornos colaborativos como centros educativos, laboratorios de prototipado o espacios maker[cite: 25].
 
 ---
 
-## 📂 Estructura del Repositorio
+## 📂 Índice de Contenidos
 
-| Carpeta | Contenido |
-| :--- | :--- |
-| [📁 Web Interactive](./creacion-de-web-interactiva) | [cite_start]Código fuente de la plataforma (Login, Panel de Usuario/Admin)[cite: 989]. |
-| [📁 Infrastructure](./esquema-de-red) | [cite_start]Configuración de red, VPN (Tailscale) y Docker[cite: 985]. |
-| [📁 Database](./base-de-datos) | [cite_start]Modelos relacionales e implementación en MariaDB[cite: 990]. |
-| [📁 Documentation](./docs) | [cite_start]Memoria técnica completa y bibliografía[cite: 994]. |
+Explora los módulos que componen la infraestructura de Servijam:
 
----
-
-## 🛠️ Stack Tecnológico
-
-### **Infraestructura y Red**
-* [cite_start]**Controlador:** Raspberry Pi 4 con Raspbian[cite: 1018, 1020].
-* [cite_start]**VPN:** [Tailscale](https://tailscale.com/) (Protocolo WireGuard) para conectividad punto a punto segura[cite: 1038, 1040].
-* [cite_start]**DNS Dinámico:** Duck DNS para acceso remoto con IP dinámica[cite: 1165].
-* [cite_start]**Proxy:** Nginx Proxy Manager para gestión de certificados SSL y tráfico[cite: 1186].
-
-### **Ecosistema 3D**
-* [cite_start]**Firmware:** Klipper (Control de bajo nivel)[cite: 1021].
-* [cite_start]**API:** Moonraker (Intermediario REST API / WebSocket)[cite: 1067, 1082].
-* [cite_start]**Interfaz G-Code:** Fluidd (Ligera y responsiva)[cite: 1086].
-* [cite_start]**Laminador:** Kiri:Moto (Slicing en la nube/web)[cite: 1519].
-
-### **Desarrollo Web**
-* [cite_start]**Backend:** PHP (PDO) con MariaDB[cite: 1299, 1803].
-* [cite_start]**Contenedores:** Docker & Docker Compose[cite: 1126, 1147].
-* [cite_start]**Servidor Web:** Apache HTTP Server[cite: 1104].
+| Carpeta | Descripción | Stack Principal |
+| :--- | :--- | :--- |
+| [📁 Cap 1. Introducción](./Capítulo-1-Introducción) | [cite_start]Objetivos y requisitos funcionales/técnicos del sistema[cite: 35]. | `Documentación` |
+| [📁 Cap 2. Base teórica](./Capítulo-2-Base-teórica) | [cite_start]Esquema de red e infraestructura (Tailscale, Moonraker, Docker)[cite: 38]. | `Infraestructura` |
+| [📁 Cap 3. Desc. experimental](./Capítulo-3-Descripción-experimental) | [cite_start]Desarrollo de la web interactiva y gestión de la base de datos[cite: 42]. | `PHP` `MariaDB` |
+| [📁 Cap 4. Conclusiones](./Capítulo-4-Conclusiones-y-líneas-futuras) | [cite_start]Validación del entorno y propuestas de escalabilidad (2FA, Granjas)[cite: 45]. | `Análisis` |
 
 ---
 
-## ⚙️ Características Principales
+## 🛠️ Tecnologías y Herramientas
 
-* [cite_start]**🔐 Seguridad:** Autenticación de usuarios con hash de contraseñas y restricción por roles (Admin/User)[cite: 1003, 1257].
-* [cite_start]**📊 Monitorización:** Consulta en tiempo real de temperaturas (extruder/bed) y progreso de impresión mediante la API de Moonraker[cite: 1011, 1074].
-* [cite_start]**📂 Gestión de Archivos:** Carga y validación de archivos `.gcode` con almacenamiento jerárquico por usuario[cite: 1005, 1027].
-* [cite_start]**🕒 Cola de Impresión:** Gestión de trabajos bajo política **FIFO** (First In, First Out)[cite: 1007].
-* [cite_start]**👁️ Visor 3D:** Integración de *GCode Analyzer* para vista previa del modelo antes de imprimir[cite: 1535].
+### 🗄️ Gestión de Datos y Backend
+<p align="left">
+  <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=apache&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+</p>
 
----
+### 🛡️ Red y Conectividad Segura
+<p align="left">
+  <img src="https://img.shields.io/badge/Tailscale-4433FF?style=for-the-badge&logo=tailscale&logoColor=white" />
+  <img src="https://img.shields.io/badge/WireGuard-88171A?style=for-the-badge&logo=wireguard&logoColor=white" />
+  <img src="https://img.shields.io/badge/Nginx_Proxy-009639?style=for-the-badge&logo=nginx&logoColor=white" />
+  <img src="https://img.shields.io/badge/DuckDNS-FFEE00?style=for-the-badge&logo=duckdns&logoColor=black" />
+</p>
 
-## 📐 Esquema de Red
-[cite_start]El sistema se integra de forma transparente en redes existentes mediante una IP estática y el nodo de gestión **RASPI-1**[cite: 1033, 1203]:
-
-1. **R1:** Router doméstico.
-2. **RASPI-1:** Gestor de servicios internos/externos.
-3. **RASPI-2:** Controlador directo de la impresora (Klipper).
-4. [cite_start]**IMP-3D-1:** Impresora FDM[cite: 1031, 1035].
-
----
-
-## 👥 Autores
-Proyecto realizado por:
-* [cite_start]**Juan Carlos Hernández Risso** [cite: 953]
-* [cite_start]**Arturo Manso Borrego** [cite: 953]
-* [cite_start]**Marco Antonio Méndez Rivero** [cite: 953]
-
-[cite_start]**Tutor:** Alberto Fernández Sánchez [cite: 952]  
-[cite_start]**Institución:** La Salle [cite: 956]  
-[cite_start]**Año:** 2025 [cite: 954]
+### 🖨️ Ecosistema de Impresión 3D
+* [cite_start]**Klipper:** Firmware para el control de la impresora[cite: 75].
+* [cite_start]**Moonraker:** API REST para la comunicación con la interfaz[cite: 121].
+* [cite_start]**Fluidd:** Interfaz gráfica de monitorización[cite: 140].
+* [cite_start]**Kiri:Moto:** Laminador integrado para preparación de G-code[cite: 573].
 
 ---
 
-## 📜 Licencia
-[cite_start]Este proyecto está bajo la licencia **Creative Commons Reconocimiento-NoComercial 4.0 Internacional (CC BY-NC 4.0)**[cite: 969].
+## 🌟 Hitos Técnicos (ASIR)
+
+* [cite_start]**🔐 Conectividad Overlay:** Implementación de túneles **WireGuard** mediante Tailscale para conexión directa entre nodos tras NAT[cite: 94, 97].
+* [cite_start]**🐳 Contenerización:** Despliegue de microservicios orquestados con **Docker Compose** para asegurar la portabilidad del sistema[cite: 201].
+* [cite_start]**📡 Monitorización Real-time:** Uso de **WebSockets** para actualizar temperaturas y estados de impresión sin recargar la web[cite: 135].
+* [cite_start]**🏗️ Modelo Relacional:** Base de datos optimizada en **MariaDB** con relación 1:N entre usuarios y trabajos de impresión[cite: 857, 859].
+
+---
+
+## 🤝 Autores
+* [cite_start]**Juan Carlos Hernández Risso** [cite: 7]
+* [cite_start]**Arturo Manso Borrego** [cite: 7]
+* [cite_start]**Marco Antonio Méndez Rivero** [cite: 7]
+
+[cite_start]**Tutor:** Alberto Fernández Sánchez [cite: 6]  
+[cite_start]**Institución:** Colegio Institución La Salle (Madrid) [cite: 10, 17]
+
+---
+
+<p align="left">
+  <a href="https://www.linkedin.com/in/marco-antonio-m%C3%A9ndez-rivero-a8a85628a" target="_blank">
+    <b>🔗 Mi LinkedIn</b>
+  </a>
+</p>
+
+---
+[cite_start]<p align="center"> © 2025 SERVIJAM - Licencia Creative Commons BY-NC 4.0 [cite: 8, 23] </p>
