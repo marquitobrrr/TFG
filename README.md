@@ -58,11 +58,12 @@
 * [cite_start]**Juan Carlos Hernández Risso** [cite: 7]
 * [cite_start]**Arturo Manso Borrego** [cite: 7]
 * [cite_start]**Marco Antonio Méndez Rivero** [cite: 7]
+  
+## 👨🏻‍🏫 Docencia
+* [cite_start]**Tutor:** Alberto Fernández Sánchez [cite: 6]  
+* [cite_start]**Institución:** Colegio Institución La Salle (Madrid) [cite: 10, 17]
 
-[cite_start]**Tutor:** Alberto Fernández Sánchez [cite: 6]  
-[cite_start]**Institución:** Colegio Institución La Salle (Madrid) [cite: 10, 17]
 
----
 <p align="left">
   <a href="https://www.linkedin.com/in/juanhernandzr" target="_blank">
     <b>🔗 LinkedIn Juan Carlos Hernandez Risso </b>
@@ -80,6 +81,11 @@
     <b>🔗 Mi LinkedIn</b>
   </a>
 </p>
+
+---
+## 📚 Memoria
+
+[📄 Memoria Técnica (PDF)](./Memoria/Servijam.pdf) | Documento completo del proyecto Servijam. 
 
 ---
 <p align="center"> © 2025 SERVIJAM - Licencia Creative Commons BY-NC 4.0 </p>
