@@ -1,7 +1,7 @@
 # 🚀 SERVIJAM: Gestión de Impresión 3D en Red
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/render?type=waving&color=003366&height=200&section=header&text=SERVIJAM&fontSize=80&animation=fadeIn" />
+  <img src="./Servijam/imgs/logo.png" />
 </p>
 
 ## 📝 Resumen del Proyecto
