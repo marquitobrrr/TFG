@@ -82,4 +82,4 @@
 </p>
 
 ---
-[cite_start]<p align="center"> © 2025 SERVIJAM - Licencia Creative Commons BY-NC 4.0 [cite: 8, 23] </p>
+<p align="center"> © 2025 SERVIJAM - Licencia Creative Commons BY-NC 4.0 </p>
